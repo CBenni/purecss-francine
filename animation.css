@@ -1,0 +1,40 @@
+.eye {
+	background: none !important;
+}
+
+.eyeball {
+	height: 100%;
+	transition: height 0.1s, transform 0.1s;
+	animation-name: blink-eyeball;
+	animation-duration: 10s;
+	animation-iteration-count: infinite;
+}
+
+body .paper .container .square .head .face .eye .lash.top, body .paper .container .square .head .face .eye .lash.lash1 {
+	animation: blink-lashes 10s infinite;
+}
+
+body .paper .container .square .head .face .eye.eleft {
+	animation: blink-left-eye 10s infinite;
+}
+
+@keyframes blink-eyeball {
+	0% { height: 100%; transform: translateY(0%); }
+	98% { height: 100%; transform: translateY(0%); }
+	99% { height: 50%; transform: translateY(100%); }
+	100% { height: 100%; transform: translateY(0%); }
+}
+
+@keyframes blink-lashes {
+	0% { transform: translateY(0%) rotate(123deg); }
+	98% { transform: translateY(0%) rotate(123deg); }
+	99% { transform: translateY(50%) rotate(123deg); }
+	100% { transform: translateY(0%) rotate(123deg); }
+}
+
+@keyframes blink-left-eye {
+	0% { transform: scaleX(-1) rotate(18deg); }
+	98% { transform: scaleX(-1) rotate(18deg); }
+	99% { transform: scaleX(-1) rotate(10deg); }
+	100% { transform: scaleX(-1) rotate(18deg); }
+}
